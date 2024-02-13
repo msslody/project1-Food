@@ -1,0 +1,883 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* nav bar */
+.navbar{
+    box-shadow: 0 0 10px grey;
+    position: sticky !important;
+    top: 0;
+    z-index: 10;
+}
+.navbar-brand img{
+    width: 150px;
+    padding-left: 50px;
+}
+.navbar-nav .nav-item{
+    padding: 10px;
+}
+.navbar-nav{
+    margin-left: 20%;
+}
+.nav-item a{
+    position: relative;
+}
+.nav-item a::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #FAC031;
+    position: absolute;
+    left: 0;
+    bottom: -2%;
+    transform: scale(0);
+    /* transform-origin: left; */
+    transition: 0.4s;
+}
+.nav-item a:hover:after{
+    transform: scale(1);
+    transition: 0.4s;
+    /* transform-origin: left */
+}
+
+
+/* burger section */
+.container{
+    display: flex;
+    padding: 15px 80px;
+}
+.container .left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 200px;
+}
+.container .left-side h2{
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 80px;
+    
+}
+.container .left-side h2 span{
+    color: orangered;
+    display: block;
+}
+.container .left-side p{
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.container .left-side .btn{
+    display: flex;
+    justify-content: flex-start;
+}
+.container .left-side .btn a{
+    padding: 8px 16px;
+    border: 1px solid orangered;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.container .left-side .btn a i{
+    transition: 0.2s;
+}
+.container .left-side .btn a:hover i{
+    margin-left: 5px;
+    transition: 0.2s;
+}
+.container .left-side .btn a:hover{
+    background-color: orangered;
+    color: white;
+    transition: 0.2s;
+}
+.container .right-side{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+.container .right-side img{
+    width: 100%;
+}
+.container h1{
+    font-size: 70px;
+    font-weight: 700;
+}
+.container .left-side h1 span{
+    color: orangered;
+}
+.container .left-side h3{
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 0px;
+}
+#left p{
+    margin-top: 20px;
+}
+#left .btn a{
+    background-color: orangered;
+    color: white;
+}
+#left .btn a:hover{
+    background-color: white;
+    color: black;
+}
+.container-menu{
+    width: 100%;
+}
+
+/* menu section */
+.menu h1,.gallery h1, .review h1 ,.order h1{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 600;
+    margin: 20px;
+}
+.container-menu h1 span, .gallery h1 span, .review h1 span, .order h1 span{
+    color: orangered;
+}
+.menu h1 span{
+    color: orangered;
+}
+.menu{
+    padding: 1rem 2rem;
+}
+.card-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px;
+    padding: 0;
+}
+.card{
+    height:  550px !important;
+    box-shadow: 0 0 4px grey;
+    padding: 15px;
+    border-radius: 15px;
+}
+.card .img{
+    height: 200px;
+}
+.card .img img{
+    width: 100%;
+    height: 230px;
+    transition: 0.3s;
+}
+.info h3{
+    text-align: center;
+    color: orangered;
+    padding: 15px;
+}
+.info p{
+    text-align: center;
+    line-height: 30px;
+    font: 18px;
+    height: 90px;
+    
+}
+.info h4{
+    text-align: center;
+    font-weight: 600;
+    font-size: 19px;
+    padding: 15px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info button{
+    border: 1px solid orangered;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.info button:hover{
+    background-color: orangered;
+    color: white;
+    transition: 0.3s;
+}
+.img{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+ 
+}
+.img i {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    right: -40px;
+    top: 10px;
+    transition: 0.3s;
+    opacity: 0;
+}
+.img:hover i{
+    right: 10px;
+    transition: 0.3s;
+    opacity: 1;
+}
+.img i:hover{
+    color: red;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.img:hover img{
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
+/* gallery section */
+.gallery{
+    width: 100%;
+}
+.gallery h1{
+    margin-top: 200px;
+  
+}
+.gallery-detail{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.detail-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detail-2{
+
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background-color: #FAC031;
+}
+.detail-2 .info-2{
+    position: absolute;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.546);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.detail-2:hover .info-2{
+    visibility: visible;
+    right: 0;
+    transition: 0.4s;
+}
+.detail-2 .info-2 h3{
+    text-align: center;
+    font-size: 40px;
+    color: orange;
+    padding-top: 10px;
+    
+}
+.detail-2 .info-2 p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.detail-2 .info-2 button{
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    transition: 0.2s;
+}
+.detail-2 .info-2 button:hover{
+    background-color:#FAC031;
+    transition: 0.2s;
+}
+
+/* review section */
+.review h1{
+    margin-top: 200px;
+    font-size: 50px;
+}
+.card-review .card{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s ease;
+    
+}
+.card-review .card .img {
+    border-radius: 50%;
+    padding: 5px;
+    place-items: center;
+    
+}
+.card-review .card .img img{
+   
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    
+}
+.card-review .card .img img:hover{
+    transform: none;
+}
+.card-review .card h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
+    margin-top: 10px;
+}
+.card-review .card .link{
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+.card-review .card .link a{
+    color: black;
+    font-size: 1.2rem ;
+    transition: 0.3s;
+
+}
+.card-review .card .link a:hover{
+    color: red;
+}
+.card-review .card p{
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(50,50,50);
+
+}
+.card-review .card:hover{
+    scale: 0.95;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* order section */
+.order h1{
+    margin-top: 200px;
+    margin-bottom: 20px;
+}
+.order-box{
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.order-box img{
+    width: 40%;
+
+}
+.order-box button{
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    border-radius: 50px;
+    background-color:green ;
+    color: white;
+    border: 2px solid black;
+}
+
+
+/* footer section */
+.footer{
+    width: 100%;
+    height: 500px;
+    background-color: #FAC031;
+    padding: 50px;
+    margin-top: 60px;
+}
+.footer-logo{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.footer-logo img{
+    width: 150px;
+    object-fit: cover;
+    
+}
+.link h3, .contact h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.link-box{
+    display: flex;
+    flex-direction: column;
+
+}
+.link-box a{
+   
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.link-box a:hover{
+    color: blue;
+}
+.contact-logo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-logo a{
+    color: black;
+}
+.contact-logo a i {
+    font-size: 35px;
+    margin-left: 25px;
+}
+.contact-logo a i:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 50px 0;
+    
+}
+.footer .container-fluid h1{
+    font-size: 40px;
+    margin-top: 50px;
+}
+.footer .container-fluid h1 span{
+    color: orangered;
+}
+
+
+
+  
+  
+  
+
+
+
+
+
+/* 
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+@media (max-width: 575px) { 
+    /* navbar */
+    .navbar-nav{
+        margin-left: 40%;
+    }
+    .nav-item a::after{
+        width: 25%; 
+    }
+
+    /* burger */
+    .container .left-side h2{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .container{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .container .left-side .btn{
+        justify-content: center;
+    }
+    .container .left-side{
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+    .container .right-side img{
+        width: 90%;
+    }
+    .container .right-side{
+        margin-bottom: 0px;
+        margin: 10px ;
+    }
+    .container h1{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .container .left-side h3{
+        font-size: 40px;
+        line-height: 0;
+    }
+    
+    /* gallery section */
+    .detail-2 .info-2 h3{
+        font-size: 40px;
+    }
+    .detail-2 .info-2 p{
+        font-size: 15px;
+        
+    }
+    .detail-2 .info-2 button{
+        
+        font-size: 20px;
+    }
+
+    /* review section */
+    .review h1, .menu h1, .gallery h1 , .order h1 {
+        font-size: 40px;
+    }
+    .card-review .card .link{
+        display: flex;
+        gap: 10px;
+        margin: 0;
+    }
+    
+
+    
+    /* order section */
+    .order-box{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .order-box img{
+        width: 70%;
+    }
+    .order-box button{
+        width: 200px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    
+    /* footer section */
+    .footer{
+        height: 1000px;
+        background-color: #FAC031;
+        padding: 50px;
+        margin-top: 50px;
+    }
+    .footer-logo img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-logo{
+        margin-left: 20%;
+    }
+    .link, .contact{
+        margin-top: 30px;
+        margin-left: 30%;
+    }
+    .footer .container-fluid h1{
+        font-size: 23px;
+    }
+    
+    
+
+
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+     /* navbar */
+    .navbar-nav{
+        margin-left: 45%;
+    }
+    .nav-item a::after{
+        width: 18%; 
+    }
+
+    /* burger */
+    .container .left-side h2{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .container{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .container .left-side .btn{
+        justify-content: center;
+    }
+    .container .left-side{
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+    .container .right-side img{
+        width: 90%;
+    }
+    .container .right-side{
+        margin-bottom: 0px;
+        margin: 10px ;
+    }
+    .container h1{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .container .left-side h3{
+        font-size: 40px;
+        line-height: 0;
+    }
+    /* menu section */
+    .info p{
+        height: 130px;
+    }
+
+    /* gallery section */
+    .detail-2 .info-2{
+        gap: 0;
+        padding: 0;
+    }
+    .detail-2 .info-2 h3{
+        font-size: 25px;
+        padding-top: 0;
+        
+    }
+    .detail-2 .info-2 p{
+        font-size: 12px;
+        padding: 0 10px;
+        
+    }
+    .detail-2 .info-2 button{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    /* order section */
+    .order-box{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .order-box img{
+        width: 70%;
+    }
+    .order-box button{
+        width: 250px;
+        height: 75px;
+        font-size: 30px;
+    }
+
+    /* footer section */
+    .footer{
+        margin-top: 30px;
+        padding: 20px;
+        padding-top: 50px;
+    }
+    .footer-logo{
+        width: 150px;
+        height: 150px;
+        
+    }
+    .footer-logo img{
+        width: 100px;
+        
+        
+    }
+
+
+
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) { 
+     /* navbar */
+    .navbar-nav{
+        margin-left: 48%;
+    }
+    .nav-item a::after{
+        width: 14%; 
+    }
+
+    /* burger */
+    .container .left-side{
+        width: 100%;
+    }
+    .container .left-side h2{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .container .left-side{
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+    #burger{
+        margin-top: -60px;
+    }
+    #plate{
+        margin-top: -70px;
+    }
+    .container h1{
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .container .left-side h3{
+        font-size: 40px;
+        line-height: 0;
+    }
+    .container .right-side{
+        margin-bottom: 0px;
+        margin: 10px ;
+    }
+
+    /* gallery section */
+    .detail-2 .info-2{
+        gap: 0;
+        padding: 0;
+    }
+    .detail-2 .info-2 h3{
+        font-size: 20px;
+        padding-top: 0;
+        
+    }
+    .detail-2 .info-2 p{
+        font-size: 12px;
+        
+    }
+    .detail-2 .info-2 button{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    /* order section */
+    .order-box{
+        gap: 80px;
+    }
+    .order-box button{
+        width: 225px;
+        height: 75px;
+        font-size: 30px;
+    }
+    
+    
+
+
+   
+
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+     /* navbar */
+    .navbar-brand img{
+        width: 100px;
+        padding-left: 20px;
+    }
+    .navbar-nav{
+        margin-left: 0%;
+    }
+    .nav-item a::after{
+        width: 85%; 
+        left: 10%;
+        bottom: 10%;
+    }
+
+    /* burger */
+    .container .left-side{
+        width: 150%;
+    }
+    .container .left-side h2{
+        font-size: 55px;
+        line-height: 60px;
+        margin-top: 20px;
+    }
+    .container .left-side{
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+    .container h1{
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .container .left-side h3{
+        font-size: 40px;
+        line-height: 0;
+    }
+    .container .right-side{
+        margin-bottom: 0px;
+        margin: 10px ;
+    }
+   
+    /* menu section */
+    .info p{
+        height: 120px;
+    }
+
+    /* gallery section */
+    .detail-2 .info-2{
+        gap: 0;
+        padding: 0;
+    }
+    .detail-2 .info-2 h3{
+        font-size: 25px;
+        padding-top: 0;
+        
+    }
+    .detail-2 .info-2 p{
+        font-size: 15px;
+        
+    }
+    .detail-2 .info-2 button{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+
+    /* order section */
+    .order-box{
+        gap: 80px;
+    }
+    .order-box button{
+        width: 250px;
+        height: 75px;
+        font-size: 35px;
+    }
+
+    
+
+}
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px)and (max-width: 1300px){ 
+     /* navbar */
+    .navbar-nav{
+        margin-left: 8%;
+    }
+    .nav-item a::after{
+        width: 85%; 
+        left: 10%;
+        bottom: 10%;
+    }
+    /* menu section */
+    .info p{
+        height: 100px;
+    }
+
+     /* gallery section */
+     .detail-2 .info-2{
+        gap: 0;
+        padding: 0;
+    }
+   
+
+}
+
